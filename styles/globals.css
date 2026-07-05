@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 1. 引入你放在 public 根目录的字体 */
 @font-face {
-  font-family: 'SmileySans';
-  src: url('/SmileySans-Oblique.otf') format('opentype');
+  font-family: 'MyCustomFont';
+  src: url('/SmileySans-Oblique.otf') format('opentype'); /* 如果是 .otf 文件，把 format 改成 'opentype' */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* 2. 强行让网页所有元素都用这个字体 */
+* {
+  font-family: 'MyCustomFont', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
 }
 
 html {
